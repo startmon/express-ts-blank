@@ -1,0 +1,30 @@
+{
+  "name": "{{project-name}}",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "start:ts": "tsx -r ./env.config.ts src/index.ts",
+    "start": "node dist/src/index.js",
+    "dev": "nodemon --watch .env --watch src/**/*.ts --watch env.config.ts --ignore .env.sample --exec tsx -r ./env.config.ts src/index.ts",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.5.5",
+    "nodemon": "^3.1.4",
+    "replace-in-file": "^8.2.0",
+    "ts-patch": "^3.2.1",
+    "tsx": "^4.19.1",
+    "typescript-transform-paths": "^3.5.1"
+  }
+}
