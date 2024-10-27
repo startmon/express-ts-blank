@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "moduleResolution": "Bundler",
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "strict": true,
@@ -13,22 +13,12 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "resolveJsonModule": true,
-    "declaration": true,
-    "allowSyntheticDefaultImports": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "noEmit": false,
-    "plugins": [
-      {
-        "transform": "typescript-transform-paths",
-        "afterDeclarations": true,
-        "extensionTransformer": {
-          "enabled": true,
-          "extension": ".js"
-        }
-      }
-    ]
+    "resolveJsonModule": true,             // Enable JSON imports
+    "declaration": true,                   // Generate declaration files
+    "allowSyntheticDefaultImports": true,  // For better compatibility with modules
+    "emitDecoratorMetadata": true,         // Enables JS imports for decorators
+    "experimentalDecorators": true,        // Enables experimental decorators
+    "noEmit": false                        // Ensure files are output correctly
   },
   "include": ["src/**/*", "env.config.ts"],
   "exclude": ["node_modules"]

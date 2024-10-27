@@ -1,6 +1,6 @@
 import app from "./app";
-import "../env.config";
-
+import "../env.config"; // Load environment variables from the .env file
+ 
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
