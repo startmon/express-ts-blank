@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "outDir": "./dist",
+    "rootDir": "./",
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "resolveJsonModule": true,             // Enable JSON imports
+    "declaration": true,                   // Generate declaration files
+    "allowSyntheticDefaultImports": true,  // For better compatibility with modules
+    "emitDecoratorMetadata": true,         // Enables JS imports for decorators
+    "experimentalDecorators": true,        // Enables experimental decorators
+    "noEmit": false                        // Ensure files are output correctly
+  },
+  "include": ["src/**/*", "env.config.ts"],
+  "exclude": ["node_modules"]
+}
